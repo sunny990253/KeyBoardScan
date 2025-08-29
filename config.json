@@ -1,0 +1,20 @@
+{
+  "image_size": [
+    64,
+    48
+  ],
+  "display_mode": "float",
+  "default_dir": "default",
+  "user_dir": "user",
+  "key_w": 8,
+  "key_h": 3,
+  "window_width": 1700,
+  "window_height": 530,
+  "realtime_image_size": [
+    80,
+    80
+  ],
+  "max_keys_per_row": 10,
+  "max_rows": 3,
+  "realtime_background": "default"
+}
