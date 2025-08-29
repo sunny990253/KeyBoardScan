@@ -27,14 +27,14 @@ def create_spec_file():
 block_cipher = None
 
 a = Analysis(
-    ['main.py'],
+    ['main.py'],  # 主程式
     pathex=[],
     binaries=[],
-    datas=[
+    datas=[   # 資源檔
         ('default', 'default'),
         ('resources.py', '.'),
     ],
-    hiddenimports=[
+    hiddenimports=[  # 隱藏模組
         'PIL._tkinter_finder',
         'keyboard',
         'tkinter',
@@ -76,14 +76,14 @@ exe = EXE(
 )
 '''
     
-    with open('KeyBoard.spec', 'w', encoding='utf-8') as f: # 改name
+    with open('KeyBoard.spec', 'w', encoding='utf-8') as f: # name
         f.write(spec_content)
     print("已新增spec")
 
 def build_exe():
 
     result = subprocess.run([
-        'pyinstaller', 'KeyBoard.spec', '--clean'
+        'pyinstaller', 'KeyBoard.spec', '--clean'  # name
     ], capture_output=True, text=True)
     
     if result.returncode == 0:
